@@ -22,7 +22,7 @@ confirm:
 ## run/api: run the cmd/api application
 .PHONY: run/api
 run/api:
-	go run ./cmd/api
+	go run ./cmd/api -discogs-api-url=${DISCOGS_API_URL} -discogs-api-key=${DISCOGS_API_KEY} -discogs-api-secret=${DISCOGS_API_SECRET}
 
 ## wrun/api: run the cmd/api application with auto reload
 .PHONY: wrun/api

@@ -38,3 +38,8 @@ func (app *application) methodNotAllowedResponse(w http.ResponseWriter, r *http.
 	message := fmt.Sprintf("the %s method is not supported for this resource", r.Method)
 	app.errorResponse(w, r, http.StatusMethodNotAllowed, message)
 }
+
+func (app *application) discogsApiErrorResponse(w http.ResponseWriter, r *http.Request) {
+	message := fmt.Sprintf("unexpected status code from the Discogs API")
+	app.errorResponse(w, r, http.StatusServiceUnavailable, message)
+}
