@@ -8,7 +8,7 @@ git clone https://github.com/njvanhaute/discnet.git
 cd discnet
 ```
 
-At this point, you'll need to create a .envrc file exporting DISCOGS_API_URL, DISCOGS_API_KEY, and DISCOGS_API_SECRET.
+At this point, you'll need to create a .envrc file exporting DISCOGS_API_URL, DISCOGS_API_KEY, DISCOGS_API_SECRET, and DISCNET_USER_AGENT.
 
 Then, just run
 
