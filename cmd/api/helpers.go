@@ -94,6 +94,7 @@ func (app *application) readIDParam(r *http.Request) (int64, error) {
 
 func (app *application) buildRequest(method string, endpoint string) (*http.Request, error) {
 	req, err := http.NewRequest(method, endpoint, nil)
+	req.Header.Set("User-Agent", app.config.userAgent)
 	req.Header.Add("Authorization", fmt.Sprintf("Discogs key=%s, secret=%s", app.config.discogsApiKey, app.config.discogsApiSecret))
 	return req, err
 }

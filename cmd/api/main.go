@@ -15,6 +15,7 @@ type config struct {
 	discogsApiUrl    string
 	discogsApiKey    string
 	discogsApiSecret string
+	userAgent        string
 }
 
 type application struct {
@@ -36,6 +37,8 @@ func main() {
 	flag.StringVar(&cfg.discogsApiUrl, "discogs-api-url", "", "Discogs API base URL")
 	flag.StringVar(&cfg.discogsApiKey, "discogs-api-key", "", "Discogs API key")
 	flag.StringVar(&cfg.discogsApiSecret, "discogs-api-secret", "", "Discogs API secret")
+
+	flag.StringVar(&cfg.userAgent, "user-agent", "", "User agent string to use on outbound HTTP requests")
 
 	flag.Parse()
 
